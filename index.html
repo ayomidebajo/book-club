@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="dist/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <title>Quidax Book Club</title>
+  </head>
+  <body>
+    <nav class="header--container" id="header--container">
+      <!-- HHIDDEN SEARCH BOX -->
+      <div>
+        <div class="search--container" id="search--container">
+          <div class="arrow-back">
+            <i class="fas fa-arrow-left" id="arrow-back"></i>
+          </div>
+          <div class="input-field__mobile" id="input-field__mobile">
+            <input
+              class="input-mobile"
+              id="input"
+              type="text"
+              placeholder="Search"
+            />
+            <button class="btn-input-mobile">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+        <div class="search--dropdown" id="search--dropdown">
+          <div class="result">
+            Four Steps To The Epiph<span class="fade"
+              >any Revised - James Mc...</span
+            >
+          </div>
+          <div class="result">
+            Four Steps To The Epiph<span class="fade">any - James McEnroe</span>
+          </div>
+          <div class="result">
+            The Lean Start Up <span class="fade">- Eric Reiss</span>
+          </div>
+          <div class="result">
+            <span class="fade">No Excuses - Brian Tracy</span>
+          </div>
+        </div>
+      </div>
+      <!-- NAVBAR -->
+      <div class="navbar--container" id="navbar--container">
+        <button class="hamburger" id="hamburger" onclick="openFunction()">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="logo--container" id="logo--container">
+          <img src="./images/logo.png" alt="logo" />
+          <div class="web-name">
+            Quidax Book Club
+            <span class="admin">Admin</span>
+          </div>
+        </div>
+
+        <div class="input-field" id="input-field">
+          <input class="input" type="text" />
+          <button class="btn-input" id="btn-input">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+
+        <div class="left" id="left">
+          <img src="./images/books.png" alt="Books" class="book-image" />
+          <div>
+            <i class="far fa-bell"> </i>
+            <div class="notify">3</div>
+          </div>
+          <img src="./images/avatar.png" alt="avatar" />
+        </div>
+      </div>
+    </nav>
+    <!-- BODY CONTAINER -->
+    <div class="main--container">
+      <!-- SIDE NAVBAR -->
+      <div class="side-nav--container" id="side-nav--container">
+        <div class="side-nav" id="side-nav">
+          <div class="arrow-left" id="arrow-left">
+            <i class="fas fa-arrow-left" onclick="closeFunction()"></i>
+          </div>
+          <div class="logo--container side-nav__logo">
+            <img src="./images/logo.png" alt="logo" />
+            <div class="side-nav__admin">
+              Quidax Book Club
+              <span class="admin-text">Admin</span>
+            </div>
+          </div>
+          <div class="nav-div">
+            <ul class="nav-lists">
+              <li class="text-side__nav">
+                <span class="text-left">
+                  Home
+                </span>
+              </li>
+              <li class="text-side__nav">
+                <span class="text-left">
+                  Profile
+                </span>
+              </li>
+              <li class="text-side__nav">
+                <span class="text-left">
+                  Notifications
+                </span>
+
+                <span class="notify-green">3</span>
+              </li>
+            </ul>
+          </div>
+          <div class="nav-div">
+            <ul class="nav-lists">
+              <h4 class="title-side-nav">Explore</h4>
+              <li class="text-side__nav">
+                <span class="text-left">
+                  Books
+                </span>
+                <span class="aside-text">273</span>
+              </li>
+              <li class="text-side__nav">
+                <span class="text-left">
+                  Genres
+                </span>
+                <span class="aside-text">42</span>
+              </li>
+              <li class="text-side__nav">
+                <span class="text-left">
+                  Authors
+                </span>
+                <span class="aside-text">106</span>
+              </li>
+            </ul>
+          </div>
+          <div class="nav-div">
+            <ul class="nav-lists">
+              <h4 class="title-side-nav">My Books</h4>
+              <li class="text-side__nav">
+                <span class="text-left">
+                  Queued
+                </span>
+                <span class="aside-text">3</span>
+              </li>
+              <li class="text-side__nav">
+                <span class="text-left">
+                  Currently
+                </span>
+              </li>
+              <li class="text-side__nav">
+                <span class="text-left">
+                  Borrowed
+                </span>
+                <span class="aside-text">0</span>
+              </li>
+              <li class="text-side__nav">
+                <span class="text-left">
+                  Favourites
+                </span>
+                <span class="aside-text">19</span>
+              </li>
+              <li class="text-side__nav">
+                <span class="text-left">
+                  History
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="no-line">
+            <ul class="nav-lists">
+              <h4 class="title-side-nav">Admin</h4>
+              <li class="text-side__nav">
+                <span class="text-left">
+                  Book Requests
+                </span>
+                <span class="aside-text">3</span>
+              </li>
+              <li class="text-side__nav">
+                <span class="text-left">
+                  Members
+                </span>
+                <span class="aside-text">3</span>
+              </li>
+              <li class="text-side__nav">
+                <span class="text-left">
+                  Library Settings
+                </span>
+                <span class="aside-text">3</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- SIDE DASHBOARD -->
+      <div class="side-dashboard" id="side-dashboard">
+        <div class="carousel--container">
+          <div class="first--header">
+            <h3 class="header--title">featured books</h3>
+            <div class="border-line"></div>
+          </div>
+          <div class="main-carousel">
+            <div class="carousel-cell">
+              <div class="book-one">
+                <div class="dots--container">
+                  <div class="three-dots-btn" id="three-dots-btn">
+                    <div class="dot--btn__container">
+                      <div class="dot-btn"></div>
+                      <div class="dot-btn"></div>
+                      <div class="dot-btn"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="about-book" id="about-book">
+                <div class="about-book__container">
+                  <i class="fas fa-times"></i>
+
+                  <h6 class="availabilty-green">Available</h6>
+
+                  <h4 class="book-title">Built to last</h4>
+                  <p class="author">Jim Collins, Jerry I. Porras - 2001</p>
+                  <div>
+                    <p class="genre">
+                      <span class="bold">Genre: </span>Motivational
+                    </p>
+                    <p class="label">
+                      <span class="bold">Label: </span>Creative, Self-help
+                    </p>
+                  </div>
+
+                  <div class="other-details">
+                    <div class="rating">
+                      <div><span class="bold">Ratings:</span>4.0</div>
+
+                      <div class="star-container">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+                    <div class="attention-container">
+                      <div class="users">
+                        <i class="fas fa-user-friends"></i>
+                        <span class="total-users">31</span>
+                      </div>
+                      <div class="users">
+                        <i class="far fa-heart"></i>
+                        <span class="total-users">29</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-cell">
+              <div class="book-two">
+                <div class="dots--container">
+                  <div class="three-dots-btn" id="three-dots-btn">
+                    <div class="dot--btn__container">
+                      <div class="dot-btn"></div>
+                      <div class="dot-btn"></div>
+                      <div class="dot-btn"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="about-book" id="about-book">
+                <div class="about-book__container">
+                  <h6 class="availabilty-green">Available</h6>
+
+                  <h4 class="book-title">Built to last</h4>
+                  <p class="author">Jim Collins, Jerry I. Porras - 2001</p>
+                  <div>
+                    <p class="genre">
+                      <span class="bold">Genre: </span>Motivational
+                    </p>
+                    <p class="label">
+                      <span class="bold">Label: </span>Creative, Self-help
+                    </p>
+                  </div>
+
+                  <div class="other-details">
+                    <div class="rating">
+                      <div><span class="bold">Ratings:</span>4.0</div>
+
+                      <div class="star-container">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+                    <div class="attention-container">
+                      <div class="users">
+                        <i class="fas fa-user-friends"></i>
+                        <span class="total-users">31</span>
+                      </div>
+                      <div class="users">
+                        <i class="far fa-heart"></i>
+                        <span class="total-users">29</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-cell">
+              <div class="book-three">
+                <div class="dots--container">
+                  <div class="three-dots-btn" id="three-dots-btn">
+                    <div class="dot--btn__container">
+                      <div class="dot-btn"></div>
+                      <div class="dot-btn"></div>
+                      <div class="dot-btn"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="about-book" id="about-book">
+                <div class="about-book__container">
+                  <h6 class="availabilty-green">Available</h6>
+
+                  <h4 class="book-title">Built to last</h4>
+                  <p class="author">Jim Collins, Jerry I. Porras - 2001</p>
+                  <div>
+                    <p class="genre">
+                      <span class="bold">Genre: </span>Motivational
+                    </p>
+                    <p class="label">
+                      <span class="bold">Label: </span>Creative, Self-help
+                    </p>
+                  </div>
+
+                  <div class="other-details">
+                    <div class="rating">
+                      <div><span class="bold">Ratings:</span>4.0</div>
+
+                      <div class="star-container">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+                    <div class="attention-container">
+                      <div class="users">
+                        <i class="fas fa-user-friends"></i>
+                        <span class="total-users">31</span>
+                      </div>
+                      <div class="users">
+                        <i class="far fa-heart"></i>
+                        <span class="total-users">29</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-cell">
+              <div class="book-two">
+                <div class="dots--container">
+                  <div class="three-dots-btn" id="three-dots-btn">
+                    <div class="dot--btn__container">
+                      <div class="dot-btn"></div>
+                      <div class="dot-btn"></div>
+                      <div class="dot-btn"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="about-book" id="about-book">
+                <div class="about-book__container">
+                  <h6 class="availabilty-green">Available</h6>
+
+                  <h4 class="book-title">Built to last</h4>
+                  <p class="author">Jim Collins, Jerry I. Porras - 2001</p>
+                  <div>
+                    <p class="genre">
+                      <span class="bold">Genre: </span>Motivational
+                    </p>
+                    <p class="label">
+                      <span class="bold">Label: </span>Creative, Self-help
+                    </p>
+                  </div>
+
+                  <div class="other-details">
+                    <div class="rating">
+                      <div><span class="bold">Ratings:</span>4.0</div>
+
+                      <div class="star-container">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+                    <div class="attention-container">
+                      <div class="users">
+                        <i class="fas fa-user-friends"></i>
+                        <span class="total-users">31</span>
+                      </div>
+                      <div class="users">
+                        <i class="far fa-heart"></i>
+                        <span class="total-users">29</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-cell">
+              <div class="book-four">
+                <div class="dots--container">
+                  <div class="three-dots-btn" id="three-dots-btn">
+                    <div class="dot--btn__container">
+                      <div class="dot-btn"></div>
+                      <div class="dot-btn"></div>
+                      <div class="dot-btn"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="about-book" id="about-book">
+                <div class="about-book__container">
+                  <h6 class="availabilty-green">Available</h6>
+
+                  <h4 class="book-title">Built to last</h4>
+                  <p class="author">Jim Collins, Jerry I. Porras - 2001</p>
+                  <div>
+                    <p class="genre">
+                      <span class="bold">Genre: </span>Motivational
+                    </p>
+                    <p class="label">
+                      <span class="bold">Label: </span>Creative, Self-help
+                    </p>
+                  </div>
+
+                  <div class="other-details">
+                    <div class="rating">
+                      <div><span class="bold">Ratings:</span>4.0</div>
+
+                      <div class="star-container">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+                    <div class="attention-container">
+                      <div class="users">
+                        <i class="fas fa-user-friends"></i>
+                        <span class="total-users">31</span>
+                      </div>
+                      <div class="users">
+                        <i class="far fa-heart"></i>
+                        <span class="total-users">29</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-cell">
+              <div class="book-five">
+                <div class="dots--container">
+                  <div class="three-dots-btn" id="three-dots-btn">
+                    <div class="dot--btn__container">
+                      <div class="dot-btn"></div>
+                      <div class="dot-btn"></div>
+                      <div class="dot-btn"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="about-book" id="about-book">
+                <div class="about-book__container">
+                  <h6 class="availabilty-green">Available</h6>
+
+                  <h4 class="book-title">Built to last</h4>
+                  <p class="author">Jim Collins, Jerry I. Porras - 2001</p>
+                  <div>
+                    <p class="genre">
+                      <span class="bold">Genre: </span>Motivational
+                    </p>
+                    <p class="label">
+                      <span class="bold">Label: </span>Creative, Self-help
+                    </p>
+                  </div>
+
+                  <div class="other-details">
+                    <div class="rating">
+                      <div><span class="bold">Ratings:</span>4.0</div>
+
+                      <div class="star-container">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+                    <div class="attention-container">
+                      <div class="users">
+                        <i class="fas fa-user-friends"></i>
+                        <span class="total-users">31</span>
+                      </div>
+                      <div class="users">
+                        <i class="far fa-heart"></i>
+                        <span class="total-users">29</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-cell">
+              <div class="book-one">
+                <div class="dots--container">
+                  <div class="three-dots-btn" id="three-dots-btn">
+                    <div class="dot--btn__container">
+                      <div class="dot-btn"></div>
+                      <div class="dot-btn"></div>
+                      <div class="dot-btn"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="about-book" id="about-book">
+                <div class="about-book__container">
+                  <h6 class="availabilty-green">Available</h6>
+
+                  <h4 class="book-title">Built to last</h4>
+                  <p class="author">Jim Collins, Jerry I. Porras - 2001</p>
+                  <div>
+                    <p class="genre">
+                      <span class="bold">Genre: </span>Motivational
+                    </p>
+                    <p class="label">
+                      <span class="bold">Label: </span>Creative, Self-help
+                    </p>
+                  </div>
+
+                  <div class="other-details">
+                    <div class="rating">
+                      <div><span class="bold">Ratings:</span>4.0</div>
+
+                      <div class="star-container">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+                    <div class="attention-container">
+                      <div class="users">
+                        <i class="fas fa-user-friends"></i>
+                        <span class="total-users">31</span>
+                      </div>
+                      <div class="users">
+                        <i class="far fa-heart"></i>
+                        <span class="total-users">29</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- RECENTLY ADDED -->
+        <div class="recently-added">
+          <h3 class="header--title-item">Recently added</h3>
+          <div class="border-line"></div>
+          <div class="recently-added__grid--container">
+            <div class="book--card">
+              <div class="book-card-item">
+                <img src="/images/big-magic.png" width="120px" alt="" />
+              </div>
+              <div class="about-book-item">
+                <div class="about-book__container--item">
+                  <h6 class="available-green">Available</h6>
+
+                  <h4 class="book-title-item">Built to last</h4>
+                  <p class="author-item">
+                    Jim Collins, Jerry I. Porras - 2001
+                  </p>
+                  <div>
+                    <p class="genre-item">
+                      <span class="bold">Genre: </span>Motivational
+                    </p>
+                    <p class="label-item">
+                      <span class="bold">Label: </span>Creative, Self-help
+                    </p>
+                  </div>
+
+                  <div class="other-details-item">
+                    <div class="rating-item--container">
+                      <div class="rating-item">
+                        <span class="bold-item">Ratings:</span>4.0
+                      </div>
+
+                      <div class="star-container-item">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="attention-container-item">
+                      <div class="users-item">
+                        <i class="fas fa-user-friends"></i>
+                        <span class="total-users-item">31</span>
+                      </div>
+                      <div class="users-item">
+                        <i class="far fa-heart"></i>
+                        <span class="total-users-item">29</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="book--card">
+              <div class="book-card-item">
+                <img src="/images/built-to-last.png" width="120px" alt="" />
+              </div>
+              <div class="about-book-item">
+                <div class="about-book-item">
+                  <div class="about-book__container--item">
+                    <h6 class="available-green">Available</h6>
+
+                    <h4 class="book-title-item">Built to last</h4>
+                    <p class="author-item">
+                      Jim Collins, Jerry I. Porras - 2001
+                    </p>
+                    <div>
+                      <p class="genre-item">
+                        <span class="bold">Genre: </span>Motivational
+                      </p>
+                      <p class="label-item">
+                        <span class="bold">Label: </span>Creative, Self-help
+                      </p>
+                    </div>
+
+                    <div class="other-details-item">
+                      <div class="rating-item--container">
+                        <div class="rating-item">
+                          <span class="bold-item">Ratings:</span>4.0
+                        </div>
+
+                        <div class="star-container-item">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="attention-container-item">
+                        <div class="users-item">
+                          <i class="fas fa-user-friends"></i>
+                          <span class="total-users-item">31</span>
+                        </div>
+                        <div class="users-item">
+                          <i class="far fa-heart"></i>
+                          <span class="total-users-item">29</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="book--card">
+              <div class="book-card-item">
+                <img src="/images/effective-python.png" width="120px" alt="" />
+              </div>
+              <div class="about-book-item">
+                <div class="about-book-item">
+                  <div class="about-book__container--item">
+                    <h6 class="available-green">Available</h6>
+
+                    <h4 class="book-title-item">Built to last</h4>
+                    <p class="author-item">
+                      Jim Collins, Jerry I. Porras - 2001
+                    </p>
+                    <div>
+                      <p class="genre-item">
+                        <span class="bold">Genre: </span>Motivational
+                      </p>
+                      <p class="label-item">
+                        <span class="bold">Label: </span>Creative, Self-help
+                      </p>
+                    </div>
+
+                    <div class="other-details-item">
+                      <div class="rating-item--container">
+                        <div class="rating-item">
+                          <span class="bold-item">Ratings:</span>4.0
+                        </div>
+
+                        <div class="star-container-item">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="attention-container-item">
+                        <div class="users-item">
+                          <i class="fas fa-user-friends"></i>
+                          <span class="total-users-item">31</span>
+                        </div>
+                        <div class="users-item">
+                          <i class="far fa-heart"></i>
+                          <span class="total-users-item">29</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="book--card">
+              <div class="book-card-item">
+                <img
+                  src="/images/effective-engineer.png"
+                  width="120px"
+                  alt=""
+                />
+              </div>
+              <div class="about-book-item">
+                <div class="about-book-item">
+                  <div class="about-book__container--item">
+                    <h6 class="available-green">Available</h6>
+
+                    <h4 class="book-title-item">Built to last</h4>
+                    <p class="author-item">
+                      Jim Collins, Jerry I. Porras - 2001
+                    </p>
+                    <div>
+                      <p class="genre-item">
+                        <span class="bold">Genre: </span>Motivational
+                      </p>
+                      <p class="label-item">
+                        <span class="bold">Label: </span>Creative, Self-help
+                      </p>
+                    </div>
+
+                    <div class="other-details-item">
+                      <div class="rating-item--container">
+                        <div class="rating-item">
+                          <span class="bold-item">Ratings:</span>4.0
+                        </div>
+
+                        <div class="star-container-item">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="attention-container-item">
+                        <div class="users-item">
+                          <i class="fas fa-user-friends"></i>
+                          <span class="total-users-item">31</span>
+                        </div>
+                        <div class="users-item">
+                          <i class="far fa-heart"></i>
+                          <span class="total-users-item">29</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="book--card">
+              <div class="book-card-item">
+                <img src="/images/big-magic.png" width="120px" alt="" />
+              </div>
+              <div class="about-book-item">
+                <div class="about-book-item">
+                  <div class="about-book__container--item">
+                    <h6 class="available-green">Available</h6>
+
+                    <h4 class="book-title-item">Built to last</h4>
+                    <p class="author-item">
+                      Jim Collins, Jerry I. Porras - 2001
+                    </p>
+                    <div>
+                      <p class="genre-item">
+                        <span class="bold">Genre: </span>Motivational
+                      </p>
+                      <p class="label-item">
+                        <span class="bold">Label: </span>Creative, Self-help
+                      </p>
+                    </div>
+
+                    <div class="other-details-item">
+                      <div class="rating-item--container">
+                        <div class="rating-item">
+                          <span class="bold-item">Ratings:</span>4.0
+                        </div>
+
+                        <div class="star-container-item">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="attention-container-item">
+                        <div class="users-item">
+                          <i class="fas fa-user-friends"></i>
+                          <span class="total-users-item">31</span>
+                        </div>
+                        <div class="users-item">
+                          <i class="far fa-heart"></i>
+                          <span class="total-users-item">29</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ALL BOOKS -->
+        <div class="recently-added">
+          <h3 class="header--title-item">All books</h3>
+          <div class="border-line"></div>
+          <div class="recently-added__grid--container">
+            <div class="book--card">
+              <div class="book-card-item">
+                <img src="/images/big-magic.png" width="120px" alt="" />
+              </div>
+              <div class="about-book-item">
+                <div class="about-book__container--item">
+                  <h6 class="available-green">Available</h6>
+
+                  <h4 class="book-title-item">Built to last</h4>
+                  <p class="author-item">
+                    Jim Collins, Jerry I. Porras - 2001
+                  </p>
+                  <div>
+                    <p class="genre-item">
+                      <span class="bold">Genre: </span>Motivational
+                    </p>
+                    <p class="label-item">
+                      <span class="bold">Label: </span>Creative, Self-help
+                    </p>
+                  </div>
+
+                  <div class="other-details-item">
+                    <div class="rating-item--container">
+                      <div class="rating-item">
+                        <span class="bold-item">Ratings:</span>4.0
+                      </div>
+
+                      <div class="star-container-item">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="attention-container-item">
+                      <div class="users-item">
+                        <i class="fas fa-user-friends"></i>
+                        <span class="total-users-item">31</span>
+                      </div>
+                      <div class="users-item">
+                        <i class="far fa-heart"></i>
+                        <span class="total-users-item">29</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="book--card">
+              <div class="book-card-item">
+                <img src="/images/effective-python.png" width="120px" alt="" />
+              </div>
+              <div class="about-book-item">
+                <div class="about-book-item">
+                  <div class="about-book__container--item">
+                    <h6 class="available-green">Available</h6>
+
+                    <h4 class="book-title-item">Built to last</h4>
+                    <p class="author-item">
+                      Jim Collins, Jerry I. Porras - 2001
+                    </p>
+                    <div>
+                      <p class="genre-item">
+                        <span class="bold">Genre: </span>Motivational
+                      </p>
+                      <p class="label-item">
+                        <span class="bold">Label: </span>Creative, Self-help
+                      </p>
+                    </div>
+
+                    <div class="other-details-item">
+                      <div class="rating-item--container">
+                        <div class="rating-item">
+                          <span class="bold-item">Ratings:</span>4.0
+                        </div>
+
+                        <div class="star-container-item">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="attention-container-item">
+                        <div class="users-item">
+                          <i class="fas fa-user-friends"></i>
+                          <span class="total-users-item">31</span>
+                        </div>
+                        <div class="users-item">
+                          <i class="far fa-heart"></i>
+                          <span class="total-users-item">29</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="book--card">
+              <div class="book-card-item">
+                <img src="/images/the-lean-startup.png" width="120px" alt="" />
+              </div>
+              <div class="about-book-item">
+                <div class="about-book-item">
+                  <div class="about-book__container--item">
+                    <h6 class="available-green">Available</h6>
+
+                    <h4 class="book-title-item">Built to last</h4>
+                    <p class="author-item">
+                      Jim Collins, Jerry I. Porras - 2001
+                    </p>
+                    <div>
+                      <p class="genre-item">
+                        <span class="bold">Genre: </span>Motivational
+                      </p>
+                      <p class="label-item">
+                        <span class="bold">Label: </span>Creative, Self-help
+                      </p>
+                    </div>
+
+                    <div class="other-details-item">
+                      <div class="rating-item--container">
+                        <div class="rating-item">
+                          <span class="bold-item">Ratings:</span>4.0
+                        </div>
+
+                        <div class="star-container-item">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="attention-container-item">
+                        <div class="users-item">
+                          <i class="fas fa-user-friends"></i>
+                          <span class="total-users-item">31</span>
+                        </div>
+                        <div class="users-item">
+                          <i class="far fa-heart"></i>
+                          <span class="total-users-item">29</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="book--card">
+              <div class="book-card-item">
+                <img src="/images/built-to-last.png" width="120px" alt="" />
+              </div>
+              <div class="about-book-item">
+                <div class="about-book-item">
+                  <div class="about-book__container--item">
+                    <h6 class="available-green">Available</h6>
+
+                    <h4 class="book-title-item">Built to last</h4>
+                    <p class="author-item">
+                      Jim Collins, Jerry I. Porras - 2001
+                    </p>
+                    <div>
+                      <p class="genre-item">
+                        <span class="bold">Genre: </span>Motivational
+                      </p>
+                      <p class="label-item">
+                        <span class="bold">Label: </span>Creative, Self-help
+                      </p>
+                    </div>
+
+                    <div class="other-details-item">
+                      <div class="rating-item--container">
+                        <div class="rating-item">
+                          <span class="bold-item">Ratings:</span>4.0
+                        </div>
+
+                        <div class="star-container-item">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="attention-container-item">
+                        <div class="users-item">
+                          <i class="fas fa-user-friends"></i>
+                          <span class="total-users-item">31</span>
+                        </div>
+                        <div class="users-item">
+                          <i class="far fa-heart"></i>
+                          <span class="total-users-item">29</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="book--card">
+              <div class="book-card-item">
+                <img src="/images/big-magic.png" width="120px" alt="" />
+              </div>
+              <div class="about-book-item">
+                <div class="about-book-item">
+                  <div class="about-book__container--item">
+                    <h6 class="available-green">Available</h6>
+
+                    <h4 class="book-title-item">Built to last</h4>
+                    <p class="author-item">
+                      Jim Collins, Jerry I. Porras - 2001
+                    </p>
+                    <div>
+                      <p class="genre-item">
+                        <span class="bold">Genre: </span>Motivational
+                      </p>
+                      <p class="label-item">
+                        <span class="bold">Label: </span>Creative, Self-help
+                      </p>
+                    </div>
+
+                    <div class="other-details-item">
+                      <div class="rating-item--container">
+                        <div class="rating-item">
+                          <span class="bold-item">Ratings:</span>4.0
+                        </div>
+
+                        <div class="star-container-item">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="attention-container-item">
+                        <div class="users-item">
+                          <i class="fas fa-user-friends"></i>
+                          <span class="total-users-item">31</span>
+                        </div>
+                        <div class="users-item">
+                          <i class="far fa-heart"></i>
+                          <span class="total-users-item">29</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="book--card">
+              <div class="book-card-item">
+                <img src="/images/effective-python.png" width="120px" alt="" />
+              </div>
+              <div class="about-book-item">
+                <div class="about-book-item">
+                  <div class="about-book__container--item">
+                    <h6 class="available-green">Available</h6>
+
+                    <h4 class="book-title-item">Built to last</h4>
+                    <p class="author-item">
+                      Jim Collins, Jerry I. Porras - 2001
+                    </p>
+                    <div>
+                      <p class="genre-item">
+                        <span class="bold">Genre: </span>Motivational
+                      </p>
+                      <p class="label-item">
+                        <span class="bold">Label: </span>Creative, Self-help
+                      </p>
+                    </div>
+
+                    <div class="other-details-item">
+                      <div class="rating-item--container">
+                        <div class="rating-item">
+                          <span class="bold-item">Ratings:</span>4.0
+                        </div>
+
+                        <div class="star-container-item">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="attention-container-item">
+                        <div class="users-item">
+                          <i class="fas fa-user-friends"></i>
+                          <span class="total-users-item">31</span>
+                        </div>
+                        <div class="users-item">
+                          <i class="far fa-heart"></i>
+                          <span class="total-users-item">29</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="book--card">
+              <div class="book-card-item">
+                <img src="/images/the-lean-startup.png" width="120px" alt="" />
+              </div>
+              <div class="about-book-item">
+                <div class="about-book-item">
+                  <div class="about-book__container--item">
+                    <h6 class="available-green">Available</h6>
+
+                    <h4 class="book-title-item">Built to last</h4>
+                    <p class="author-item">
+                      Jim Collins, Jerry I. Porras - 2001
+                    </p>
+                    <div>
+                      <p class="genre-item">
+                        <span class="bold">Genre: </span>Motivational
+                      </p>
+                      <p class="label-item">
+                        <span class="bold">Label: </span>Creative, Self-help
+                      </p>
+                    </div>
+
+                    <div class="other-details-item">
+                      <div class="rating-item--container">
+                        <div class="rating-item">
+                          <span class="bold-item">Ratings:</span>4.0
+                        </div>
+
+                        <div class="star-container-item">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="attention-container-item">
+                        <div class="users-item">
+                          <i class="fas fa-user-friends"></i>
+                          <span class="total-users-item">31</span>
+                        </div>
+                        <div class="users-item">
+                          <i class="far fa-heart"></i>
+                          <span class="total-users-item">29</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="book--card">
+              <div class="book-card-item">
+                <img src="/images/built-to-last.png" width="120px" alt="" />
+              </div>
+              <div class="about-book-item">
+                <div class="about-book-item">
+                  <div class="about-book__container--item">
+                    <h6 class="available-green">Available</h6>
+
+                    <h4 class="book-title-item">Built to last</h4>
+                    <p class="author-item">
+                      Jim Collins, Jerry I. Porras - 2001
+                    </p>
+                    <div>
+                      <p class="genre-item">
+                        <span class="bold">Genre: </span>Motivational
+                      </p>
+                      <p class="label-item">
+                        <span class="bold">Label: </span>Creative, Self-help
+                      </p>
+                    </div>
+
+                    <div class="other-details-item">
+                      <div class="rating-item--container">
+                        <div class="rating-item">
+                          <span class="bold-item">Ratings:</span>4.0
+                        </div>
+
+                        <div class="star-container-item">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="attention-container-item">
+                        <div class="users-item">
+                          <i class="fas fa-user-friends"></i>
+                          <span class="total-users-item">31</span>
+                        </div>
+                        <div class="users-item">
+                          <i class="far fa-heart"></i>
+                          <span class="total-users-item">29</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="book--card">
+              <div class="book-card-item">
+                <img src="/images/big-magic.png" width="120px" alt="" />
+              </div>
+              <div class="about-book-item">
+                <div class="about-book-item">
+                  <div class="about-book__container--item">
+                    <h6 class="available-green">Available</h6>
+
+                    <h4 class="book-title-item">Built to last</h4>
+                    <p class="author-item">
+                      Jim Collins, Jerry I. Porras - 2001
+                    </p>
+                    <div>
+                      <p class="genre-item">
+                        <span class="bold">Genre: </span>Motivational
+                      </p>
+                      <p class="label-item">
+                        <span class="bold">Label: </span>Creative, Self-help
+                      </p>
+                    </div>
+
+                    <div class="other-details-item">
+                      <div class="rating-item--container">
+                        <div class="rating-item">
+                          <span class="bold-item">Ratings:</span>4.0
+                        </div>
+
+                        <div class="star-container-item">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="attention-container-item">
+                        <div class="users-item">
+                          <i class="fas fa-user-friends"></i>
+                          <span class="total-users-item">31</span>
+                        </div>
+                        <div class="users-item">
+                          <i class="far fa-heart"></i>
+                          <span class="total-users-item">29</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="book--card">
+              <div class="book-card-item">
+                <img src="/images/built-to-last.png" width="120px" alt="" />
+              </div>
+              <div class="about-book-item">
+                <div class="about-book-item">
+                  <div class="about-book__container--item">
+                    <h6 class="available-green">Available</h6>
+
+                    <h4 class="book-title-item">Built to last</h4>
+                    <p class="author-item">
+                      Jim Collins, Jerry I. Porras - 2001
+                    </p>
+                    <div>
+                      <p class="genre-item">
+                        <span class="bold">Genre: </span>Motivational
+                      </p>
+                      <p class="label-item">
+                        <span class="bold">Label: </span>Creative, Self-help
+                      </p>
+                    </div>
+
+                    <div class="other-details-item">
+                      <div class="rating-item--container">
+                        <div class="rating-item">
+                          <span class="bold-item">Ratings:</span>4.0
+                        </div>
+
+                        <div class="star-container-item">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="attention-container-item">
+                        <div class="users-item">
+                          <i class="fas fa-user-friends"></i>
+                          <span class="total-users-item">31</span>
+                        </div>
+                        <div class="users-item">
+                          <i class="far fa-heart"></i>
+                          <span class="total-users-item">29</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="book--card">
+              <div class="book-card-item">
+                <img src="/images/effective-python.png" width="120px" alt="" />
+              </div>
+              <div class="about-book-item">
+                <div class="about-book-item">
+                  <div class="about-book__container--item">
+                    <h6 class="available-green">Available</h6>
+
+                    <h4 class="book-title-item">Built to last</h4>
+                    <p class="author-item">
+                      Jim Collins, Jerry I. Porras - 2001
+                    </p>
+                    <div>
+                      <p class="genre-item">
+                        <span class="bold">Genre: </span>Motivational
+                      </p>
+                      <p class="label-item">
+                        <span class="bold">Label: </span>Creative, Self-help
+                      </p>
+                    </div>
+
+                    <div class="other-details-item">
+                      <div class="rating-item--container">
+                        <div class="rating-item">
+                          <span class="bold-item">Ratings:</span>4.0
+                        </div>
+
+                        <div class="star-container-item">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="attention-container-item">
+                        <div class="users-item">
+                          <i class="fas fa-user-friends"></i>
+                          <span class="total-users-item">31</span>
+                        </div>
+                        <div class="users-item">
+                          <i class="far fa-heart"></i>
+                          <span class="total-users-item">29</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="book--card">
+              <div class="book-card-item">
+                <img src="/images/big-magic.png" width="120px" alt="" />
+              </div>
+              <div class="about-book-item">
+                <div class="about-book-item">
+                  <div class="about-book__container--item">
+                    <h6 class="available-green">Available</h6>
+
+                    <h4 class="book-title-item">Built to last</h4>
+                    <p class="author-item">
+                      Jim Collins, Jerry I. Porras - 2001
+                    </p>
+                    <div>
+                      <p class="genre-item">
+                        <span class="bold">Genre: </span>Motivational
+                      </p>
+                      <p class="label-item">
+                        <span class="bold">Label: </span>Creative, Self-help
+                      </p>
+                    </div>
+
+                    <div class="other-details-item">
+                      <div class="rating-item--container">
+                        <div class="rating-item">
+                          <span class="bold-item">Ratings:</span>4.0
+                        </div>
+
+                        <div class="star-container-item">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="attention-container-item">
+                        <div class="users-item">
+                          <i class="fas fa-user-friends"></i>
+                          <span class="total-users-item">31</span>
+                        </div>
+                        <div class="users-item">
+                          <i class="far fa-heart"></i>
+                          <span class="total-users-item">29</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="book--card">
+              <div class="book-card-item">
+                <img src="/images/effective-python.png" width="120px" alt="" />
+              </div>
+              <div class="about-book-item">
+                <div class="about-book-item">
+                  <div class="about-book__container--item">
+                    <h6 class="available-green">Available</h6>
+
+                    <h4 class="book-title-item">Built to last</h4>
+                    <p class="author-item">
+                      Jim Collins, Jerry I. Porras - 2001
+                    </p>
+                    <div>
+                      <p class="genre-item">
+                        <span class="bold">Genre: </span>Motivational
+                      </p>
+                      <p class="label-item">
+                        <span class="bold">Label: </span>Creative, Self-help
+                      </p>
+                    </div>
+
+                    <div class="other-details-item">
+                      <div class="rating-item--container">
+                        <div class="rating-item">
+                          <span class="bold-item">Ratings:</span>4.0
+                        </div>
+
+                        <div class="star-container-item">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="attention-container-item">
+                        <div class="users-item">
+                          <i class="fas fa-user-friends"></i>
+                          <span class="total-users-item">31</span>
+                        </div>
+                        <div class="users-item">
+                          <i class="far fa-heart"></i>
+                          <span class="total-users-item">29</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
